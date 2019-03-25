@@ -1,0 +1,84 @@
+@relation test
+
+@attribute gender {Male,Female,Other}
+@attribute age numeric
+@attribute hypertension numeric
+@attribute heart_disease numeric
+@attribute ever_married {No,Yes}
+@attribute work_type {children,Private,Never_worked,Self-employed,Govt_job}
+@attribute Residence_type {Rural,Urban}
+@attribute avg_glucose_level numeric
+@attribute bmi numeric
+@attribute smoking_status {'never smoked','formerly smoked',smokes}
+@attribute stroke {no,Yes}
+
+@data
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Male,58,1,0,Yes,Private,Urban,87.96,39.2,'never smoked',?
+Male,67,0,1,Yes,Private,Urban,228.69,36.6,'formerly smoked',?
+Male,74,1,1,Yes,Private,Rural,70.09,27.4,'never smoked',?
+Male,80,0,1,Yes,Private,Rural,105.92,32.5,'never smoked',?
+Male,55,0,0,Yes,Govt_job,Rural,97.4,44.6,'formerly smoked',?
+Female,70,0,0,Yes,Private,Rural,68.34,22.8,'formerly smoked',?
+Male,34,0,0,Yes,Private,Urban,80.81,33.2,'never smoked',?
+Male,26,0,0,Yes,Private,Rural,120.31,22.3,smokes,?
+Female,39,0,0,Yes,Private,Rural,83.51,26.4,'never smoked',?
+Male,38,0,0,No,Self-employed,Urban,74.09,39.6,'never smoked',?
+Female,20,0,0,No,Private,Urban,91.6,28.1,'never smoked',?
+Female,17,0,0,No,Private,Urban,87.52,39.2,'never smoked',?
+Male,60,1,0,Yes,Private,Rural,213.37,36,'never smoked',?
+Female,75,0,0,Yes,Self-employed,Rural,75.39,37.8,'never smoked',?
+Female,31,0,0,Yes,Private,Rural,122.41,40.3,smokes,?
+Male,58,1,0,Yes,Private,Rural,223.36,41.5,'formerly smoked',?
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Male,58,1,0,Yes,Private,Urban,87.96,39.2,'never smoked',?
+Male,67,0,1,Yes,Private,Urban,228.69,36.6,'formerly smoked',?
+Male,74,1,1,Yes,Private,Rural,70.09,27.4,'never smoked',?
+Male,80,0,1,Yes,Private,Rural,105.92,32.5,'never smoked',?
+Male,55,0,0,Yes,Govt_job,Rural,97.4,44.6,'formerly smoked',?
+Female,70,0,0,Yes,Private,Rural,68.34,22.8,'formerly smoked',?
+Male,34,0,0,Yes,Private,Urban,80.81,33.2,'never smoked',?
+Male,26,0,0,Yes,Private,Rural,120.31,22.3,smokes,?
+Female,39,0,0,Yes,Private,Rural,83.51,26.4,'never smoked',?
+Male,38,0,0,No,Self-employed,Urban,74.09,39.6,'never smoked',?
+Female,20,0,0,No,Private,Urban,91.6,28.1,'never smoked',?
+Female,17,0,0,No,Private,Urban,87.52,39.2,'never smoked',?
+Male,60,1,0,Yes,Private,Rural,213.37,36,'never smoked',?
+Female,75,0,0,Yes,Self-employed,Rural,75.39,37.8,'never smoked',?
+Female,31,0,0,Yes,Private,Rural,122.41,40.3,smokes,?
+Male,58,1,0,Yes,Private,Rural,223.36,41.5,'formerly smoked',?
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Male,58,1,0,Yes,Private,Urban,87.96,39.2,'never smoked',?
+Male,67,0,1,Yes,Private,Urban,228.69,36.6,'formerly smoked',?
+Male,74,1,1,Yes,Private,Rural,70.09,27.4,'never smoked',?
+Male,80,0,1,Yes,Private,Rural,105.92,32.5,'never smoked',?
+Male,55,0,0,Yes,Govt_job,Rural,97.4,44.6,'formerly smoked',?
+Female,70,0,0,Yes,Private,Rural,68.34,22.8,'formerly smoked',?
+Male,34,0,0,Yes,Private,Urban,80.81,33.2,'never smoked',?
+Male,26,0,0,Yes,Private,Rural,120.31,22.3,smokes,?
+Female,39,0,0,Yes,Private,Rural,83.51,26.4,'never smoked',?
+Male,38,0,0,No,Self-employed,Urban,74.09,39.6,'never smoked',?
+Female,20,0,0,No,Private,Urban,91.6,28.1,'never smoked',?
+Female,17,0,0,No,Private,Urban,87.52,39.2,'never smoked',?
+Male,60,1,0,Yes,Private,Rural,213.37,36,'never smoked',?
+Female,75,0,0,Yes,Self-employed,Rural,75.39,37.8,'never smoked',?
+Female,31,0,0,Yes,Private,Rural,122.41,40.3,smokes,?
+Male,58,1,0,Yes,Private,Rural,223.36,41.5,'formerly smoked',?
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Male,58,1,0,Yes,Private,Urban,87.96,39.2,'never smoked',?
+Male,67,0,1,Yes,Private,Urban,228.69,36.6,'formerly smoked',?
+Male,74,1,1,Yes,Private,Rural,70.09,27.4,'never smoked',?
+Male,80,0,1,Yes,Private,Rural,105.92,32.5,'never smoked',?
+Male,55,0,0,Yes,Govt_job,Rural,97.4,44.6,'formerly smoked',?
+Female,70,0,0,Yes,Private,Rural,68.34,22.8,'formerly smoked',?
+Male,34,0,0,Yes,Private,Urban,80.81,33.2,'never smoked',?
+Male,26,0,0,Yes,Private,Rural,120.31,22.3,smokes,?
+Female,39,0,0,Yes,Private,Rural,83.51,26.4,'never smoked',?
+Male,38,0,0,No,Self-employed,Urban,74.09,39.6,'never smoked',?
+Female,20,0,0,No,Private,Urban,91.6,28.1,'never smoked',?
+Female,17,0,0,No,Private,Urban,87.52,39.2,'never smoked',?
+Male,60,1,0,Yes,Private,Rural,213.37,36,'never smoked',?
+Female,75,0,0,Yes,Self-employed,Rural,75.39,37.8,'never smoked',?
+Female,31,0,0,Yes,Private,Rural,122.41,40.3,smokes,?
+Male,58,1,0,Yes,Private,Rural,223.36,41.5,'formerly smoked',?
+

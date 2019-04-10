@@ -1,0 +1,352 @@
+<html>
+
+<head>
+    <title>Bot</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+            $(".form-group").hide()
+            $("#hello").show("fast")
+            $("#hello input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#hello").hide()
+                    $("#hello").next('div').show("fast")
+                        // $("#hello").nextAll('div').hide()
+                }
+            });
+            $("#know-heart-disease input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#know-heart-disease").hide()
+                    if ($(this).val().toLowerCase() == "yes" || $(this).val().toLowerCase() == "ya" || $(this).val().toLowerCase() == "sure") {
+                        $("#know-heart-disease").nextAll('#start-questions').show("fast")
+                    } else {
+                        $("#know-heart-disease").next('div').show("fast")
+                    }
+                    // $("#hello").nextAll('div').hide()
+                }
+            });
+            if ($("#start-questions:visible")) {
+                $("#next").click(function() {
+                    // $("#start-questions").hide()
+                    $("#gender").show("fast")
+                })
+
+            }
+            $("#age input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#age").hide()
+                    $("#age").next('div').show("fast")
+                        // $("#hello").nextAll('div').hide()
+                }
+            });
+            $("#hypertensive-status input[type=radio][name=hypertension-status]").change(function() {
+                // console.log("hello")
+                // var keycode = (event.keyCode ? event.keyCode : event.which);
+                // if (keycode == '13') {
+
+                console.log($("#hypertensive-status input:checked").val());
+                $("#hypertention-next").remove()
+                $("#hypertensive-status").append(
+                        $("<a>").attr("id", "hypertention-next").attr("class", "btn btn-primary").text("next")
+                    )
+                    // $("#hello").nextAll('div').hide()
+                    // }
+            });
+            $("html").on('click', "#hypertention-next", function() {
+                // $("#hypertensive-status").hide()
+                // $("#hello").next('div').show("fast")
+                if ($("#hypertensive-status input:checked").val() == "yes") {
+                    $("#hypertensive-status").nextAll('#heart-disease-status').show("fast")
+                } else {
+                    $("#hypertensive-status").next('div').show("fast")
+                }
+            })
+            $("#hypertension input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#hypertension").hide()
+                    $("#hypertension").next('div').show("fast")
+                        // $("#hello").nextAll('div').hide()
+                }
+            });
+            $("#heart-disease-status input").change(function(event) {
+
+                $("#heart-disease-status-next").remove()
+                $("#heart-disease-status").append(
+                    $("<a>").attr("id", "heart-disease-status-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#heart-disease-status-next", function() {
+                // $("#heart-disease-status").hide()
+                // $("#hello").next('div').show("fast")
+
+                $("#heart-disease-status").next('div').show("fast")
+
+            })
+            $("#marrital-status input").change(function(event) {
+                $("#marrital-status-status-next").remove()
+                $("#marrital-status").append(
+                    $("<a>").attr("id", "marrital-status-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#marrital-status-next", function() {
+                // $("#marrital-status").hide()
+                $("#marrital-status").next('div').show("fast")
+
+            })
+            $("#work-type select").change(function(event) {
+                $("#work-type-next").remove()
+                $("#work-type").append(
+                    $("<a>").attr("id", "work-type-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#work-type-next", function() {
+                // $("#work-type").hide()
+                $("#work-type").next('div').show("fast")
+
+            })
+            $("#residence select").change(function(event) {
+                $("#residence-next").remove()
+                $("#residence").append(
+                    $("<a>").attr("id", "residence-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#residence-next", function() {
+                // $("#residence").hide()
+                $("#residence").next('div').show("fast")
+
+            })
+            $("#gender input").change(function(event) {
+                $("#gender-next").remove()
+                $("#gender").append(
+                    $("<a>").attr("id", "gender-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#gender-next", function() {
+                // $("#sugar-status").hide()
+                $("#gender").next('div').show("fast")
+
+            })
+            $("#smoking-status select").change(function(event) {
+                $("#smoking-status-next").remove()
+                $("#smoking-status").append(
+                    $("<a>").attr("id", "smoking-status-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#smoking-status-next", function() {
+                // $("#residence").hide()
+                $("#smoking-status").next('div').show("fast")
+
+            })
+            $("#sugar-status input").change(function(event) {
+                $("#sugar-status-next").remove()
+                $("#sugar-status").append(
+                    $("<a>").attr("id", "sugar-status-next").attr("class", "btn btn-primary").text("next")
+                )
+            });
+            $("html").on('click', "#sugar-status-next", function() {
+                // $("#sugar-status").hide()
+                $("#sugar-status").next('div').show("fast")
+
+            })
+            $("#height input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#height").hide()
+                    $("#height").next('div').show("fast")
+                        // $("#hello").nextAll('div').hide()
+                }
+            });
+            $("#weight input").keypress(function(event) {
+                // console.log("hello")
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '13') {
+                    // console.log('You pressed a"enter" key in somewhere');
+                    // $("#weight").hide()
+                    data = {
+                        gender: $("#gender input:checked").val(),
+                        age: $("#age input").val(),
+                        hypertensive_status: $("#hypertensive-status input:checked").val(),
+                        hypertension: $("#hypertension input").val(),
+                        heart_disease_status: $("#heart-disease-status input:checked").val(),
+                        marrital_status: $("#marrital-status input:checked").val(),
+                        work_type: $("#work-type select option:selected").text(),
+                        residence: $("#residence select option:selected").text(),
+                        sugar_status: $("#sugar-status input:checked").val(),
+                        smoking_status: $("#smoking-status select option:selected").text(),
+                        height: $("#height input").val(),
+                        weight: $("#weight input").val()
+
+                    }
+                    $("#main").append(
+                        $("<div>").attr("class", "row loading").append(
+                            $("<div>").attr("class", "offset-md-2 col-md-6").append(
+                                $("<img>").attr("src", "/static/loading.gif")
+                            )
+                        )
+                    )
+                    $.post('/bot', data).then(function(response) {
+                        console.log(response)
+                        $(".loading").remove()
+                        if (response['prediction'] == "no") {
+
+                            $("#main").append(
+                                $("<p>").text("Greetings you don't need to worry")
+                            )
+                        } else {
+                            $("#main").append(
+                                $("<p>").text("You really need to take care of yourself there are chances that you might have a stroke")
+                            )
+                        }
+                    })
+                }
+            });
+
+        })
+    </script>
+    <style>
+        #main {
+            margin-top: 10%;
+            color: whitesmoke;
+        }
+        
+        .loader {
+            height: 100px;
+            width: 100px;
+        }
+        
+        #spinner {
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            /* transform: rotate(3deg); */
+            /* transform: rotate(0.3rad);/ */
+            /* transform: rotate(3grad); */
+            /* transform: rotate(.03turn);  */
+        }
+        
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: turquoise">
+    <div class="container justify-content-md-center" style="background-color: turquoise">
+        <form id="info-form">
+            <div id="main" class="card offset-md-4 col-md-5 shadow-sm-3" style="background-color: blueviolet">
+                <div id="hello" class="form-group">
+                    <span>Hello</span><br>
+                    <input id="hello-input" class="form-control mx-sm-3" type="text">
+                    <!-- <button id="nbutton">Next</button> -->
+                </div>
+                <div id="know-heart-disease" class="form-group">
+                    <span>Do you want to know if there may be any heart problems?</span><br>
+                    <input class="form-control mx-sm-3" type="text">
+                </div>
+                <div id="meet-next-time" class="form-group">
+                    <span>Sorry can't help you with anything else come back if you want to know about your probable heart problems..</span><br>
+                </div>
+                <div id="start-questions" class="form-group">
+                    <span>Okay so we will start with couple of questions.</span><span>Click next to move further</span><br>
+
+                    <a class="btn btn-primary" id="next">next</a>
+                </div>
+                <div id="gender" class="form-group">
+                    <span>You are?</span><br>
+                    <input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female
+                </div>
+                <div id="age" class="form-group">
+                    <span>So What is your age?</span><br>
+                    <input class="form-control mx-sm-3" type="number">
+                </div>
+                <div id="hypertensive-status" class="form-group">
+                    <span>Are you hypertensive</span><br>
+                    <input type="radio" name="hypertension-status" value="Yes">Yes <input type="radio" name="hypertension-status" value="No">No
+                </div>
+                <div id="hypertension" class="form-group">
+                    <span>
+                How much is your blood sugar roughly?
+            </span><br>
+                    <input class="form-control mx-sm-3" type="number">
+                </div>
+                <div id="heart-disease-status" class="form-group">
+                    <span>Do you have any heart disease?</span><br>
+                    <input type="radio" name="heart_disease_status" value="Yes">Yes<input type="radio" name="heart_disease_status" value="No">No
+                </div>
+                <div id="marrital-status" class="form-group">
+                    <span>Are you married?</span><br>
+                    <input type="radio" name="marrital_status" value="Yes">Yes<input type="radio" name="marrital_status" value="No">No
+                </div>
+                <div id="work-type" class="form-group">
+                    <span>What is your work type?(children,Private,Never_worked,Self-employed,Govt_job)</span><br>
+                    <select class="form-control">
+                <option>children</option>
+                <option>Private</option>
+                <option>Never_worked</option>
+                <option>Self-employed</option>
+                <option>Govt_job</option>
+            </select>
+                </div>
+                <div id="residence" class="form-group">
+                    <span>
+                What is your residence type(Rural,Urban)
+            </span><br>
+                    <select class="form-control">
+                <option>Rural</option>
+                <option>Urban</option>
+            </select>
+                </div>
+                <div id="smoking-status" class="form-group">
+                    <span>Do you smoke?(Never Smoked,Smokes,Formerly Smoked)</span><br>
+                    <select class="form-control">
+                        <option>Never Smoked</option>
+                        <option>Smokes</option>
+                        <option>Formerly Smoked</option>
+                    </select>
+                </div>
+                <div id="sugar-status" class="form-group">
+                    <span>Do you have sugar problem?</span><br>
+                    <input type="radio" name="sugar-status" value="Yes">Yes<input type="radio" name="sugar-status" value="No">No
+                </div>
+                <div id="height" class="form-group ">
+                    <span>What is your height?</span><br>
+                    <input type="number ">
+                </div>
+                <div id="weight" class="form-group">
+                    <span>what is your weight?</span><br>
+                    <input type="number">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

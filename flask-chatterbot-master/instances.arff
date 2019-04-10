@@ -1,0 +1,42 @@
+@relation test
+
+@attribute gender {Male,Female,Other}
+@attribute age numeric
+@attribute hypertension numeric
+@attribute heart_disease numeric
+@attribute ever_married {No,Yes}
+@attribute work_type {children,Private,Never_worked,Self-employed,Govt_job}
+@attribute Residence_type {Rural,Urban}
+@attribute avg_glucose_level numeric
+@attribute bmi numeric
+@attribute smoking_status {'never smoked','formerly smoked',smokes}
+@attribute stroke {no,yes}
+
+@data
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Male,80,0,0,Yes,Private,Urban,83.84,21.1,'formerly smoked',?
+Female,54,1,0,Yes,Private,Urban,72.93,35.7,'never smoked',yes
+Female,54,1,0,Yes,Private,Urban,72.93,35.7,'never smoked',yes
+Female,54,1,0,Yes,Private,Urban,72.93,35.7,'never smoked',?
+Female,54,1,0,Yes,Private,Urban,72.93,35.7,'never smoked',?
+Female,54,1,0,Yes,Private,Urban,72.93,35.7,'never smoked',?
+Male,24,0,0,No,'Self-employed',Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
+Male,24,0,0,No,Self-employed,Urban,100,4.527122638646598,'never smoked',?
